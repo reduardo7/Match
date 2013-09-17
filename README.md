@@ -1,11 +1,14 @@
 QMatcher
 =======
+[ ![your alt][1]](http://jsfiddle.net/tujamaica/rmznm/embedded/result/)
 
-![http://jsfiddle.net/tujamaica/rmznm/embedded/result/](https://www.dropbox.com/s/tbcsx9betbxaaq6/qmatcher-preview.png?dl=1)
+[1]: https://www.dropbox.com/s/tbcsx9betbxaaq6/qmatcher-preview.png?dl=1
 
 QMatcher is a non-dependency javascript function. I built it to try to copy the find all function of the popular
 text editor sublime text (ctrl+p) in windows or (command+p) in mac.
 I just wanted to wrap each coincidence of a user input between html tags and, as result, i came up was this nice little function.
+
+It is not a graphical plugin, just a function that returns some results. Here is a [demo](http://jsfiddle.net/tujamaica/rmznm/embedded/result/) and you can edit it [here](http://jsfiddle.net/tujamaica/rmznm/) with jsfiddle.
 
 #### For example:
 ```Javascript
