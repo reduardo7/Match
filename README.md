@@ -4,7 +4,7 @@ QMatcher
 
 [1]: https://www.dropbox.com/s/tbcsx9betbxaaq6/qmatcher-preview.png?dl=1
 
-QMatcher is a non-dependency javascript function. I built it to try to copy the find all function of the popular
+QMatcher is a non-dependency javascript function. I wrote it to try to copy the find all function of the popular
 text editor sublime text (ctrl+p) in windows or (command+p) in mac.
 I just wanted to wrap each coincidence of a user input between html tags and, as result, i came up was this nice little function.
 
