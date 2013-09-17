@@ -52,11 +52,12 @@ The above code will return the following:
 Perhaps you need a mor complex replacement, so you could do something like this:
 
 ```Javascript
-var template = '<li class="item"><a href="#"><strong>%s</strong></a></li>',
+var template = '<a href="#"><strong><i><span>%s</span></i></strong></a>',
     matches = QMatcher([
       'John', 'Jason', 'Amber', 'Stacy'
     ], 'a', template);
 ```
 
-... and well, you already know what it returns.
+... and well, you already know what it returns. Each coincidence (each character) will be injected in the %s placeholder of your template.
+
 Hope you like it, Happy Coding!
