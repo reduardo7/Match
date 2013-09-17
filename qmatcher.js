@@ -9,10 +9,10 @@
     }
 
     function QMatcher(source, search, wrapper) {
-        var results, matches, opts, rx, i, e;
+        var results, opts, rx, i, e;
 
         // Set the default wrapper tag
-        wrapper = wrapper === false ? wrapper : typeof wrapper === 'string' ? wrapper : 'strong';
+        wrapper = wrapper === false ? wrapper : typeof wrapper === 'string' ? wrapper : '<strong>%s</strong>';
         // Transform the source into an iterable array
         source = !(source instanceof Array) ? [source] : source;
         // Split search input into an array
@@ -27,10 +27,10 @@
         results = [];
 
         function wrapMatch() {
-            matches = [];
+            var matches = [];
             for (e = 1; e < arguments.length - 2; e++) {
                 // Check if the current argument is a match
-                matches[e] = (e % 2 === 1) ? ('<' + wrapper + '>' + arguments[e] + '</' + wrapper + '>') :  arguments[e];
+                matches[e] = (e % 2 === 1) ? wrapper.replace(/\%s/, arguments[e]) : arguments[e];
             }
             return matches.join('');
         }
