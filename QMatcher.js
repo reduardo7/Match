@@ -10,12 +10,14 @@
 
     function QMatcher(source, search, wrapper) {
         var results, matches, opts, rx, i, e;
+
         // Set the default wrapper tag
         wrapper = wrapper === false ? wrapper : typeof wrapper === 'string' ? wrapper : 'strong';
         // Transform the source into an iterable array
         source = !(source instanceof Array) ? [source] : source;
         // Split search input into an array
         opts = search.split('');
+
         // Iterate over each character and scape it
         for (i = 0; i < opts.length; i++) {
             opts[i] = '(' + opts[i].replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&") + ')';
