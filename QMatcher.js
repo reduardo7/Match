@@ -8,14 +8,6 @@
         return;
     }
 
-    /**
-     * Looks for matches within an array and returns them wrapped in tags (optional)
-     * @author Gabriel Vaquer
-     * @param {Array|String} source
-     * @param {String} search
-     * @param {String|Bool} wrapper
-     * @return {Array}
-     */
     function QMatcher(source, search, wrapper) {
         // Set the default wrapper tag
         wrapper = wrapper === false ? wrapper : typeof wrapper === 'string' ? wrapper : 'strong';
