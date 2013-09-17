@@ -48,3 +48,15 @@ The above code will return the following:
 ```Javascript
 [ '<b>t</b>hisIs<b>M</b>y<b>C</b>ool<b>S</b>tring<b>S</b>ource' ]
 ```
+
+Perhaps you need a mor complex replacement, so you could do something like this:
+
+```Javascript
+var template = '<li class="item"><a href="#"><strong>%s</strong></a></li>',
+    matches = QMatcher([
+      'John', 'Jason', 'Amber', 'Stacy'
+    ], 'a', template);
+```
+
+... and well, you already know what it returns.
+Hope you like it, Happy Coding!
