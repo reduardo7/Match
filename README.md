@@ -1,4 +1,4 @@
-Matcher
+QMatcher
 =======
 
 ![http://jsfiddle.net/tujamaica/rmznm/embedded/result/](https://www.dropbox.com/s/tbcsx9betbxaaq6/qmatcher-preview.png?dl=1)
