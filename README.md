@@ -14,7 +14,7 @@ It is not a graphical plugin, just a function that returns some results. Here is
 ```Javascript
 var matches = QMatcher([
   'John', 'Jason', 'Amber', 'Stacy'
-], 'o', 'strong');
+], 'o', '<strong>%s</strong>');
 ```
 
 The result would be something like this:
@@ -40,7 +40,7 @@ The result would be something like this:
 It will always return an array, but you can choose to pass, as the source, an array or a string.
 
 ```Javascript
-var matches = QMatcher('thisIsMyCoolStringSource', 'tmcss', 'b');
+var matches = QMatcher('thisIsMyCoolStringSource', 'tmcss', '<b>%s</b>');
 ```
 
 The above code will return the following:
