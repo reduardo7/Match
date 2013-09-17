@@ -12,7 +12,7 @@
         var results, opts, rx, i, e;
 
         // Set the default wrapper tag
-        wrapper = wrapper === false ? wrapper : typeof wrapper === 'string' ? wrapper : '<strong>%s</strong>';
+        wrapper = wrapper !== undefined ? wrapper : false;
         // Transform the source into an iterable array
         source = !(source instanceof Array) ? [source] : source;
         // Split search input into an array
@@ -47,4 +47,4 @@
     // Expose it globally
     window.QMatcher = QMatcher;
 
-}(window || this));
+}(window));
