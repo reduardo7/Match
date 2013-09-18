@@ -20,7 +20,7 @@
 
         // Iterate over each character and scape it
         for (i = 0; i < opts.length; i++) {
-            opts[i] = '(' + opts[i].replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&") + ')';
+            opts[i] = '(' + opts[i].replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/, "\\$&") + ')';
         }
 
         rx = new RegExp(opts.join('(.*?)'), 'gi');
