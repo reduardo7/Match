@@ -18,7 +18,7 @@
             return item.replace(rx, function () {
                 matches = [];
                 for (i = 1; i < arguments.length - 2; i++) {
-                    matches[i] = (i % 2 === 1) ? wrapper.replace(/\%s/, arguments[i]) : arguments[i];
+                    matches.push((i % 2 === 1) ? wrapper.replace(/\%s/, arguments[i]) : arguments[i]);
                 }
                 return matches.join('');
             });
