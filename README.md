@@ -23,12 +23,12 @@ The result would be something like this:
 [ 'J<strong>o</strong>hn', 'Jas<strong>o</strong>n' ]
 ```
 
-If you only need the coincidences without wrapping them, just pass false as the third parameter.
+If you only need the coincidences without wrapping them, just omit the third parameter.
 
 ```Javascript
 var matches = QMatcher([
   'John', 'Jason', 'Amber', 'Stacy'
-], 'a', false);
+], 'a');
 ```
 
 The result would be something like this:
