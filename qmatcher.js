@@ -6,7 +6,7 @@
         var results, opts, rx, i, e;
 
         // Transform the source into an iterable array
-        if ( ! (source instanceof Array ) ) {
+        if ( ! ( source instanceof Array ) ) {
             source = [ source ];
         }
 
