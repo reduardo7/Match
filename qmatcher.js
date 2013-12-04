@@ -1,51 +1,45 @@
-(function ( window ) {
+;(function(window) {
+  "use strict";
 
-    'use strict';
+  var rescape = /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/,
+      rgroup = /[a-zA-Z0-9]/gi;
 
-    function QMatcher( source, search, wrapper ) {
-        var results, opts, rx, i, e;
-
-        // Transform the source into an iterable array
-        if ( ! ( source instanceof Array ) ) {
-            source = [ source ];
-        }
-
-        opts = search.split( '' );
-        // Iterate over each character and scape it
-        for ( i = 0; i < opts.length; i++ ) {
-            opts[ i ] = '(' + opts[ i ].replace( /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/, "\\$&" ) + ')';
-        }
-
-        rx = new RegExp( opts.join( '(.*?)' ), 'gi' );
-        results = [];
-
-        function wrapMatch() {
-            var matches = [];
-            for ( e = 1; e < arguments.length - 2; e++ ) {
-                // Check if the current argument is a match
-                matches.push( ( e % 2 === 1 ) ? wrapper.replace( /\%s/, arguments[ e ] ) : arguments[ e ] );
-            }
-            return matches.join( '' );
-        }
-
-        // This duplicated code is for performance only
-        if ( wrapper !== undefined ) {
-            for ( i = 0; i < source.length; i++ ) {
-                if ( rx.test( source[ i ] ) ) {
-                    results.push( source[ i ].replace( rx, wrapMatch ) );
-                }
-            }
-        } else {
-            for ( i = 0; i < source.length; i++ ) {
-                if ( rx.test( source[ i ] ) ) {
-                    results.push( source[ i ] );
-                }
-            }
-        }
-
-        return results;
+  function replaceWith(regexp, item, replace) {
+    var matches, results = [], i;
+    matches = item.match(regexp).slice(1);
+    for (i = 0; i < matches.length; i++) {
+      results.push((i % 2 === 1) ? replace.replace(/\%s/, matches[i]) : matches[i]);
     }
+    return results.join("");
+  }
 
-    // Expose it globally
-    window.QMatcher = QMatcher;
-})( window );
+  function Match(source, find, replace) {
+    var results = [], replace, r, i;
+    source = (Object.prototype.toString.call(source) === "[object Array]") ? source : [source]
+    find = find || "";
+    r = new RegExp(["(.*)",
+      find.replace(rescape, "(\\$&)")
+          .replace(rgroup, "($&)")
+          .replace(/(\(.+?\))/g, "$1(.*)")
+      ].join("")
+    );
+    if (typeof replace !== "string") {
+      for (i = 0; i < source.length; i++) {
+        if (r.test(source[i])) {
+          results.push(source[i]);
+        }
+      }
+    }
+    else {
+      for (i = 0; i < source.length; i++) {
+        if (r.test(source[i])) {
+          results.push(replaceWith(source[i]));
+        }
+      }
+    }
+    return results;
+  }
+
+  window.Match = Match;
+
+})(window);
