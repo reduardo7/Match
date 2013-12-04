@@ -1,10 +1,10 @@
-QMatcher
+Match
 =======
 [ ![your alt][1]](http://jsfiddle.net/tujamaica/rmznm/embedded/result/)
 
 [1]: https://www.dropbox.com/s/tbcsx9betbxaaq6/qmatcher-preview.png?dl=1
 
-QMatcher is a non-dependency javascript function. I wrote it to try to copy the find all function of the popular
+Match is a non-dependency javascript function. I wrote it to try to copy the find all function of the popular
 text editor sublime text (ctrl+p) in windows or (command+p) in mac.
 I just wanted to wrap each coincidence of a user input between html tags and, as result, i came up was this nice little function.
 
@@ -12,7 +12,7 @@ It is not a graphical plugin, just a function that returns some results. Here is
 
 #### For example:
 ```Javascript
-var matches = QMatcher([
+var matches = Match([
   'John', 'Jason', 'Amber', 'Stacy'
 ], 'o', '<strong>%s</strong>');
 ```
@@ -26,7 +26,7 @@ The result would be something like this:
 If you only need the coincidences without wrapping them, just omit the third parameter.
 
 ```Javascript
-var matches = QMatcher([
+var matches = Match([
   'John', 'Jason', 'Amber', 'Stacy'
 ], 'a');
 ```
@@ -40,7 +40,7 @@ The result would be something like this:
 It will always return an array, but you can choose to pass, as the source, an array or a string.
 
 ```Javascript
-var matches = QMatcher('thisIsMyCoolStringSource', 'tmcss', '<b>%s</b>');
+var matches = Match('thisIsMyCoolStringSource', 'tmcss', '<b>%s</b>');
 ```
 
 The above code will return the following:
@@ -53,7 +53,7 @@ Perhaps you need a mor complex replacement, so you could do something like this:
 
 ```Javascript
 var template = '<a href="#"><strong><i><span>%s</span></i></strong></a>',
-    matches = QMatcher([
+    matches = Match([
       'John', 'Jason', 'Amber', 'Stacy'
     ], 'a', template);
 ```
