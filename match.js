@@ -14,6 +14,7 @@
     toLowerCase = (caseSensitive === true ? function(str) {
       return str;
     } : function(str) { return str.toLowerCase(); }),
+    sort = options.sort || false,
     results = [],
     compile = (template != null && typeof template === "string"),
     slength, current, clength, token, lindex, schar, i, e;
@@ -45,6 +46,14 @@
         else {
           results.push(current);
         }
+      }
+    }
+    if (typeof sort === "string") {
+      if (sort === "asc") {
+        return results.sort();
+      }
+      else if (sort === "desc") {
+        return results.sort().reverse();
       }
     }
     return results;
