@@ -51,6 +51,20 @@ The above code will return the following:
 [ '<b>t</b>hisIs<b>M</b>y<b>C</b>ool<b>S</b>tring<b>S</b>ource' ]
 ```
 
+By default, Match is case insensitive, but you can turn it off and make it case sensitive by passing caseSensitive: true. Note that case sensitive is much faster than case insensitive.
+
+```Javascript
+var matches = Match([ 'tujamaica', 'tujaMaica' ], 'M', {
+  template: '<strong>%s</strong>',
+  caseSensitive: true
+});
+```
+
+In this case, you'll get this:
+```Javascript
+[ 'tujaMaica' ]
+```
+
 Perhaps you need a mor complex replacement, so you could do something like this:
 
 ```Javascript
