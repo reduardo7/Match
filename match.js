@@ -1,8 +1,6 @@
 ;(function(window) {
   "use strict";
 
-  var document = window.document;
-
   function Match(source, search, template) {
     var
 
