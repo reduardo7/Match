@@ -14,7 +14,7 @@ It is not a graphical plugin, just a function that returns some results. Here is
 ```Javascript
 var matches = Match([
   'John', 'Jason', 'Amber', 'Stacy'
-], 'o', '<strong>%s</strong>');
+], 'o', { template: '<strong>%s</strong>' });
 ```
 
 The result would be something like this:
@@ -40,7 +40,9 @@ The result would be something like this:
 It will always return an array, but you can choose to pass, as the source, an array or a string.
 
 ```Javascript
-var matches = Match('thisIsMyCoolStringSource', 'tmcss', '<b>%s</b>');
+var matches = Match('thisIsMyCoolStringSource', 'tmcss', {
+  template: '<b>%s</b>'
+});
 ```
 
 The above code will return the following:
@@ -55,7 +57,7 @@ Perhaps you need a mor complex replacement, so you could do something like this:
 var template = '<a href="#"><strong><i><span>%s</span></i></strong></a>',
     matches = Match([
       'John', 'Jason', 'Amber', 'Stacy'
-    ], 'a', template);
+    ], 'a', { template: template });
 ```
 
 ... and well, you already know what it returns. Each coincidence (each character) will be injected in the %s placeholder of your template.
