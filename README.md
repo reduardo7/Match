@@ -65,6 +65,20 @@ In this case, you'll get this:
 [ 'tujaMaica' ]
 ```
 
+You can also ask for an ordered list of matches. You can do it by passing sort: 'asc' or 'desc'.
+
+```Javascript
+var matches = Match([ 'stacy', 'bee', 'amy', 'julie' ], 'a', {
+  sort: 'asc'
+});
+```
+
+The output:
+
+```Javascript
+[ 'amy', 'stacy' ]
+```
+
 Perhaps you need a mor complex replacement, so you could do something like this:
 
 ```Javascript
