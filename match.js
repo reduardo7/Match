@@ -37,7 +37,6 @@
       if (token.length === search.length) {
         if (compile) {
           current = current.split("");
-
           for (e = 0; e < token.length; e++) {
             current.splice(token[e][0], 1, replace("%s", token[e][1], template));
           }
