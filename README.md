@@ -10,7 +10,13 @@ I just wanted to wrap each coincidence of a user input between html tags and, as
 
 **It is not a graphical plugin, just a function that returns some results**. Here is a [demo](http://jsfiddle.net/tujamaica/rmznm/embedded/result/) and you can edit it [here](http://jsfiddle.net/tujamaica/rmznm/) with jsfiddle.
 
-#### For example:
+#### Syntax & Arguments
+There are only two required arguments to be passed. The first one is the source on which the function will be searching against. It can be a string or an array of strings. The second one, is what you are trying to find or match. The third one is optional and it must be an object. It takes specific flags for the returning set of matches (case sensitive, sorting, templating). 
+```Javascript
+Match( Array source, String find, [, Object options ] );
+```
+
+#### Example:
 ```Javascript
 var matches = Match([
   'John', 'Jason', 'Amber', 'Stacy'
