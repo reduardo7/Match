@@ -6,7 +6,7 @@ Match
 
 Match is a non-dependency javascript function. I wrote it to try to copy the find all function of the popular
 text editor sublime text (ctrl+p) in windows, linux or (command+p) in mac.
-I just wanted to wrap each coincidence of a character between html tags and, as result, i came up was this nice little function.
+I just wanted to wrap each coincidence of a given set of characters between html tags and, as result, i came up was this nice little function.
 
 **It is not a graphical plugin, just a function that returns some results**. Here is a [demo](http://jsfiddle.net/tujamaica/rmznm/embedded/result/) and you can edit it [here](http://jsfiddle.net/tujamaica/rmznm/) with jsfiddle.
 
