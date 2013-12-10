@@ -8,7 +8,7 @@ Match is a non-dependency javascript function. I wrote it to try to copy the fin
 text editor sublime text (ctrl+p) in windows or (command+p) in mac.
 I just wanted to wrap each coincidence of a user input between html tags and, as result, i came up was this nice little function.
 
-It is not a graphical plugin, just a function that returns some results. Here is a [demo](http://jsfiddle.net/tujamaica/rmznm/embedded/result/) and you can edit it [here](http://jsfiddle.net/tujamaica/rmznm/) with jsfiddle.
+**It is not a graphical plugin, just a function that returns some results**. Here is a [demo](http://jsfiddle.net/tujamaica/rmznm/embedded/result/) and you can edit it [here](http://jsfiddle.net/tujamaica/rmznm/) with jsfiddle.
 
 #### For example:
 ```Javascript
@@ -51,7 +51,7 @@ The above code will return the following:
 [ '<b>t</b>hisIs<b>M</b>y<b>C</b>ool<b>S</b>tring<b>S</b>ource' ]
 ```
 
-By default, Match is case insensitive, but you can turn it off and make it case sensitive by passing caseSensitive: true. Note that case sensitive is much faster than case insensitive.
+By default, Match is case insensitive, but you can turn it off and make it case sensitive by passing caseSensitive: true. **Note that case sensitive is much faster than case insensitive**.
 
 ```Javascript
 var matches = Match([ 'tujamaica', 'tujaMaica' ], 'M', {
