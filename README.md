@@ -13,7 +13,7 @@ I just wanted to wrap each coincidence of a user input between html tags and, as
 #### Syntax & Arguments
 There are only two required arguments to be passed. The first one is the source on which the function will be searching against. It can be a string or an array of strings. The second one, is what you are trying to find or match. The third one is optional and it must be an object. It takes specific flags for the returning set of matches (case sensitive, sorting, templating). 
 ```Javascript
-Match( Array source, String find, [, Object options ] );
+Match( Array source, String search, [, Object options ] );
 ```
 
 #### Example:
