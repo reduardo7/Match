@@ -85,7 +85,7 @@ The output:
 [ 'amy', 'stacy' ]
 ```
 
-Perhaps you need a mor complex replacement, so you could do something like this:
+Perhaps you need a more complex replacement, so you could do something like this:
 
 ```Javascript
 var template = '<a href="#"><strong><i><span>%s</span></i></strong></a>',
