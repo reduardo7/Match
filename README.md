@@ -11,7 +11,7 @@ I just wanted to wrap each coincidence of a given set of characters between html
 **It is not a graphical plugin, just a function that returns some results**. Here is a [demo](http://jsfiddle.net/tujamaica/rmznm/embedded/result/) and you can edit it [here](http://jsfiddle.net/tujamaica/rmznm/) with jsfiddle.
 
 #### Syntax & Arguments
-There are only two required arguments to be passed. The first one is the source on which the function will be searching against. It can be a string or an array of strings. The second one, is what you are trying to find or match. The third one is optional and it must be an object. It takes specific flags for the returning set of matches (case sensitive, sorting, templating). 
+There are only two required arguments to be passed. The first one is the source on which the function will be searching against. It can be a string or an array of strings. The second one, is what you are trying to find or match. The third parameter is optional and it must be an object. It takes some flags that kinda formats the coincidences (case sensitive, sorting, templating). 
 ```Javascript
 Match( Array source, String search, [, Object options ] );
 ```
