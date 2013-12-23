@@ -96,4 +96,4 @@ var template = '<a href="#"><strong><i><span>%s</span></i></strong></a>',
 
 ... and well, you already know what it returns. Each coincidence (each character) will be injected in the %s placeholder of your template.
 
-Hope you like it, Happy Coding!
+Hope you like it, cheers.
