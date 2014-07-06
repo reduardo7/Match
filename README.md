@@ -68,7 +68,7 @@ var matches = Match([ 'tujamaica', 'tujaMaica' ], 'M', {
 
 In this case, you'll get this:
 ```Javascript
-[ 'tujaMaica' ]
+[ 'tuja<strong>M</strong>aica' ]
 ```
 
 You can also ask for an ordered list of matches. You can do it by passing sort: 'asc' or 'desc'.
